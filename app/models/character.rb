@@ -1,5 +1,5 @@
 class Character < ActiveRecord::Base
-  has_many :characters 
+  belongs_to :actor
   has_many :shows, through: :characters
   
   def say_that_thing_you_say

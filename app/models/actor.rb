@@ -10,7 +10,7 @@ class Actor < ActiveRecord::Base
     all_roles = []
     c_names_array = self.characters.map {|character| character.name}
     s_names_array = self.shows.map {|shows| shows.name}
-    role = c_names_array.concat s_names_array
+    role = c_names_array.concat(s_names_array)
     all_roles << role.join(" - ")
     all_roles
   end 

@@ -1,3 +1,3 @@
-class Character < ActiveRecord::Base[4.2]
+class Character < ActiveRecord::Base
   
 end

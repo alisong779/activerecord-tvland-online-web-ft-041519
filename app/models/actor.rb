@@ -7,7 +7,7 @@ class Actor < ActiveRecord::Base
   end 
 
   def list_roles
-    c_names = self.characters.collect {|character| character.name}
+    c_names = self.characters.collect {|character| character.name}.to_s
     s_names = self.shows.collect {|shows| shows.name}
     "#{c_names} - #{s_names}"
   end 
